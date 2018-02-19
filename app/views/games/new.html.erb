@@ -1,0 +1,17 @@
+<h1>Start a New Game!</h1>
+
+
+<ul>
+<% @letters.each do |letter| %>
+   <li><%=letter%></li>
+<% end %>
+</ul>
+
+<form action="/score" method="get">
+  <label for="attempt">Your attempt:</label>
+  <input type="text" name="attempt" placeholder="Enter your longest word">
+  <input type="submit" value="Submit it!">
+</form>
+
+<!-- name = in the input field defines the 'key' int he query string. whatever is entered becomes the 'value'
+ -->
