@@ -10,8 +10,11 @@
 <form action="/score" method="get">
   <label for="attempt">Your attempt:</label>
   <input type="text" name="attempt" placeholder="Enter your longest word">
+  <input type="hidden" name="letters" value=<%= @letters.join %>>
   <input type="submit" value="Submit it!">
 </form>
 
-<!-- name = in the input field defines the 'key' int he query string. whatever is entered becomes the 'value'
+<!-- name = in the input field defines the 'key' in the query string. whatever is entered becomes the 'value'
+create a new input field called hidden to also pass the letters across...as you cannnot use instance varaibles across methods int he class - only int he view with the same file name as the moethod!
  -->
+
